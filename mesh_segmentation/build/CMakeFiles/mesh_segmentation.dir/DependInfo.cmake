@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/threesamyak/5-axis/stl/mesh_segmentation/main.cpp" "CMakeFiles/mesh_segmentation.dir/main.cpp.o" "gcc" "CMakeFiles/mesh_segmentation.dir/main.cpp.o.d"
+  "/home/threesamyak/5-axis/stl/mesh_segmentation/build/mesh_segmentation_autogen/mocs_compilation.cpp" "CMakeFiles/mesh_segmentation.dir/mesh_segmentation_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/mesh_segmentation.dir/mesh_segmentation_autogen/mocs_compilation.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

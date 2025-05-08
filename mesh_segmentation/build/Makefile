@@ -117,19 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named CGAL_Qt5_moc_and_resources
-
-# Build rule for target.
-CGAL_Qt5_moc_and_resources: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CGAL_Qt5_moc_and_resources
-.PHONY : CGAL_Qt5_moc_and_resources
-
-# fast build rule for target.
-CGAL_Qt5_moc_and_resources/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build
-.PHONY : CGAL_Qt5_moc_and_resources/fast
-
-#=============================================================================
 # Target rules for targets named mesh_segmentation
 
 # Build rule for target.
@@ -143,54 +130,30 @@ mesh_segmentation/fast:
 .PHONY : mesh_segmentation/fast
 
 #=============================================================================
-# Target rules for targets named CGAL_Qt5_moc_and_resources_autogen_timestamp_deps
+# Target rules for targets named mesh_segmentation_autogen_timestamp_deps
 
 # Build rule for target.
-CGAL_Qt5_moc_and_resources_autogen_timestamp_deps: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CGAL_Qt5_moc_and_resources_autogen_timestamp_deps
-.PHONY : CGAL_Qt5_moc_and_resources_autogen_timestamp_deps
+mesh_segmentation_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mesh_segmentation_autogen_timestamp_deps
+.PHONY : mesh_segmentation_autogen_timestamp_deps
 
 # fast build rule for target.
-CGAL_Qt5_moc_and_resources_autogen_timestamp_deps/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources_autogen_timestamp_deps.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources_autogen_timestamp_deps.dir/build
-.PHONY : CGAL_Qt5_moc_and_resources_autogen_timestamp_deps/fast
+mesh_segmentation_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh_segmentation_autogen_timestamp_deps.dir/build.make CMakeFiles/mesh_segmentation_autogen_timestamp_deps.dir/build
+.PHONY : mesh_segmentation_autogen_timestamp_deps/fast
 
 #=============================================================================
-# Target rules for targets named CGAL_Qt5_moc_and_resources_autogen
+# Target rules for targets named mesh_segmentation_autogen
 
 # Build rule for target.
-CGAL_Qt5_moc_and_resources_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CGAL_Qt5_moc_and_resources_autogen
-.PHONY : CGAL_Qt5_moc_and_resources_autogen
+mesh_segmentation_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mesh_segmentation_autogen
+.PHONY : mesh_segmentation_autogen
 
 # fast build rule for target.
-CGAL_Qt5_moc_and_resources_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources_autogen.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources_autogen.dir/build
-.PHONY : CGAL_Qt5_moc_and_resources_autogen/fast
-
-CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.o: CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.o
-.PHONY : CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.o
-
-# target to build an object file
-CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.o
-.PHONY : CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.o
-
-CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.i: CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.i
-.PHONY : CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.i
-
-# target to preprocess a source file
-CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.i
-.PHONY : CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.i
-
-CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.s: CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.s
-.PHONY : CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.s
-
-# target to generate assembly for a file
-CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.s
-.PHONY : CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.s
+mesh_segmentation_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh_segmentation_autogen.dir/build.make CMakeFiles/mesh_segmentation_autogen.dir/build
+.PHONY : mesh_segmentation_autogen/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -216,101 +179,29 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh_segmentation.dir/build.make CMakeFiles/mesh_segmentation.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-qrc_CGAL.o: qrc_CGAL.cpp.o
-.PHONY : qrc_CGAL.o
+mesh_segmentation_autogen/mocs_compilation.o: mesh_segmentation_autogen/mocs_compilation.cpp.o
+.PHONY : mesh_segmentation_autogen/mocs_compilation.o
 
 # target to build an object file
-qrc_CGAL.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_CGAL.cpp.o
-.PHONY : qrc_CGAL.cpp.o
+mesh_segmentation_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh_segmentation.dir/build.make CMakeFiles/mesh_segmentation.dir/mesh_segmentation_autogen/mocs_compilation.cpp.o
+.PHONY : mesh_segmentation_autogen/mocs_compilation.cpp.o
 
-qrc_CGAL.i: qrc_CGAL.cpp.i
-.PHONY : qrc_CGAL.i
-
-# target to preprocess a source file
-qrc_CGAL.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_CGAL.cpp.i
-.PHONY : qrc_CGAL.cpp.i
-
-qrc_CGAL.s: qrc_CGAL.cpp.s
-.PHONY : qrc_CGAL.s
-
-# target to generate assembly for a file
-qrc_CGAL.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_CGAL.cpp.s
-.PHONY : qrc_CGAL.cpp.s
-
-qrc_File.o: qrc_File.cpp.o
-.PHONY : qrc_File.o
-
-# target to build an object file
-qrc_File.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_File.cpp.o
-.PHONY : qrc_File.cpp.o
-
-qrc_File.i: qrc_File.cpp.i
-.PHONY : qrc_File.i
+mesh_segmentation_autogen/mocs_compilation.i: mesh_segmentation_autogen/mocs_compilation.cpp.i
+.PHONY : mesh_segmentation_autogen/mocs_compilation.i
 
 # target to preprocess a source file
-qrc_File.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_File.cpp.i
-.PHONY : qrc_File.cpp.i
+mesh_segmentation_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh_segmentation.dir/build.make CMakeFiles/mesh_segmentation.dir/mesh_segmentation_autogen/mocs_compilation.cpp.i
+.PHONY : mesh_segmentation_autogen/mocs_compilation.cpp.i
 
-qrc_File.s: qrc_File.cpp.s
-.PHONY : qrc_File.s
-
-# target to generate assembly for a file
-qrc_File.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_File.cpp.s
-.PHONY : qrc_File.cpp.s
-
-qrc_Input.o: qrc_Input.cpp.o
-.PHONY : qrc_Input.o
-
-# target to build an object file
-qrc_Input.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_Input.cpp.o
-.PHONY : qrc_Input.cpp.o
-
-qrc_Input.i: qrc_Input.cpp.i
-.PHONY : qrc_Input.i
-
-# target to preprocess a source file
-qrc_Input.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_Input.cpp.i
-.PHONY : qrc_Input.cpp.i
-
-qrc_Input.s: qrc_Input.cpp.s
-.PHONY : qrc_Input.s
+mesh_segmentation_autogen/mocs_compilation.s: mesh_segmentation_autogen/mocs_compilation.cpp.s
+.PHONY : mesh_segmentation_autogen/mocs_compilation.s
 
 # target to generate assembly for a file
-qrc_Input.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_Input.cpp.s
-.PHONY : qrc_Input.cpp.s
-
-qrc_Triangulation_2.o: qrc_Triangulation_2.cpp.o
-.PHONY : qrc_Triangulation_2.o
-
-# target to build an object file
-qrc_Triangulation_2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_Triangulation_2.cpp.o
-.PHONY : qrc_Triangulation_2.cpp.o
-
-qrc_Triangulation_2.i: qrc_Triangulation_2.cpp.i
-.PHONY : qrc_Triangulation_2.i
-
-# target to preprocess a source file
-qrc_Triangulation_2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_Triangulation_2.cpp.i
-.PHONY : qrc_Triangulation_2.cpp.i
-
-qrc_Triangulation_2.s: qrc_Triangulation_2.cpp.s
-.PHONY : qrc_Triangulation_2.s
-
-# target to generate assembly for a file
-qrc_Triangulation_2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_Triangulation_2.cpp.s
-.PHONY : qrc_Triangulation_2.cpp.s
+mesh_segmentation_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mesh_segmentation.dir/build.make CMakeFiles/mesh_segmentation.dir/mesh_segmentation_autogen/mocs_compilation.cpp.s
+.PHONY : mesh_segmentation_autogen/mocs_compilation.cpp.s
 
 # Help Target
 help:
@@ -320,28 +211,15 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... CGAL_Qt5_moc_and_resources_autogen"
-	@echo "... CGAL_Qt5_moc_and_resources_autogen_timestamp_deps"
-	@echo "... CGAL_Qt5_moc_and_resources"
+	@echo "... mesh_segmentation_autogen"
+	@echo "... mesh_segmentation_autogen_timestamp_deps"
 	@echo "... mesh_segmentation"
-	@echo "... CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.o"
-	@echo "... CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.i"
-	@echo "... CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... qrc_CGAL.o"
-	@echo "... qrc_CGAL.i"
-	@echo "... qrc_CGAL.s"
-	@echo "... qrc_File.o"
-	@echo "... qrc_File.i"
-	@echo "... qrc_File.s"
-	@echo "... qrc_Input.o"
-	@echo "... qrc_Input.i"
-	@echo "... qrc_Input.s"
-	@echo "... qrc_Triangulation_2.o"
-	@echo "... qrc_Triangulation_2.i"
-	@echo "... qrc_Triangulation_2.s"
+	@echo "... mesh_segmentation_autogen/mocs_compilation.o"
+	@echo "... mesh_segmentation_autogen/mocs_compilation.i"
+	@echo "... mesh_segmentation_autogen/mocs_compilation.s"
 .PHONY : help
 
 

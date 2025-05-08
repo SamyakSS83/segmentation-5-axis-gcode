@@ -1,0 +1,6 @@
+/home/threesamyak/5-axis/stl/cgal/build/CMakeFiles/CGAL_Qt5_moc_and_resources.dir
+/home/threesamyak/5-axis/stl/cgal/build/CMakeFiles/segmentation_demo.dir
+/home/threesamyak/5-axis/stl/cgal/build/CMakeFiles/edit_cache.dir
+/home/threesamyak/5-axis/stl/cgal/build/CMakeFiles/rebuild_cache.dir
+/home/threesamyak/5-axis/stl/cgal/build/CMakeFiles/CGAL_Qt5_moc_and_resources_autogen_timestamp_deps.dir
+/home/threesamyak/5-axis/stl/cgal/build/CMakeFiles/CGAL_Qt5_moc_and_resources_autogen.dir

@@ -69,10 +69,24 @@ include CMakeFiles/mesh_segmentation.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/mesh_segmentation.dir/flags.make
 
+CMakeFiles/mesh_segmentation.dir/mesh_segmentation_autogen/mocs_compilation.cpp.o: CMakeFiles/mesh_segmentation.dir/flags.make
+CMakeFiles/mesh_segmentation.dir/mesh_segmentation_autogen/mocs_compilation.cpp.o: mesh_segmentation_autogen/mocs_compilation.cpp
+CMakeFiles/mesh_segmentation.dir/mesh_segmentation_autogen/mocs_compilation.cpp.o: CMakeFiles/mesh_segmentation.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/threesamyak/5-axis/stl/mesh_segmentation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mesh_segmentation.dir/mesh_segmentation_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mesh_segmentation.dir/mesh_segmentation_autogen/mocs_compilation.cpp.o -MF CMakeFiles/mesh_segmentation.dir/mesh_segmentation_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/mesh_segmentation.dir/mesh_segmentation_autogen/mocs_compilation.cpp.o -c /home/threesamyak/5-axis/stl/mesh_segmentation/build/mesh_segmentation_autogen/mocs_compilation.cpp
+
+CMakeFiles/mesh_segmentation.dir/mesh_segmentation_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mesh_segmentation.dir/mesh_segmentation_autogen/mocs_compilation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/threesamyak/5-axis/stl/mesh_segmentation/build/mesh_segmentation_autogen/mocs_compilation.cpp > CMakeFiles/mesh_segmentation.dir/mesh_segmentation_autogen/mocs_compilation.cpp.i
+
+CMakeFiles/mesh_segmentation.dir/mesh_segmentation_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mesh_segmentation.dir/mesh_segmentation_autogen/mocs_compilation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/threesamyak/5-axis/stl/mesh_segmentation/build/mesh_segmentation_autogen/mocs_compilation.cpp -o CMakeFiles/mesh_segmentation.dir/mesh_segmentation_autogen/mocs_compilation.cpp.s
+
 CMakeFiles/mesh_segmentation.dir/main.cpp.o: CMakeFiles/mesh_segmentation.dir/flags.make
 CMakeFiles/mesh_segmentation.dir/main.cpp.o: /home/threesamyak/5-axis/stl/mesh_segmentation/main.cpp
 CMakeFiles/mesh_segmentation.dir/main.cpp.o: CMakeFiles/mesh_segmentation.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/threesamyak/5-axis/stl/mesh_segmentation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mesh_segmentation.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/threesamyak/5-axis/stl/mesh_segmentation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mesh_segmentation.dir/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mesh_segmentation.dir/main.cpp.o -MF CMakeFiles/mesh_segmentation.dir/main.cpp.o.d -o CMakeFiles/mesh_segmentation.dir/main.cpp.o -c /home/threesamyak/5-axis/stl/mesh_segmentation/main.cpp
 
 CMakeFiles/mesh_segmentation.dir/main.cpp.i: cmake_force
@@ -85,24 +99,28 @@ CMakeFiles/mesh_segmentation.dir/main.cpp.s: cmake_force
 
 # Object files for target mesh_segmentation
 mesh_segmentation_OBJECTS = \
+"CMakeFiles/mesh_segmentation.dir/mesh_segmentation_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/mesh_segmentation.dir/main.cpp.o"
 
 # External object files for target mesh_segmentation
 mesh_segmentation_EXTERNAL_OBJECTS =
 
+mesh_segmentation: CMakeFiles/mesh_segmentation.dir/mesh_segmentation_autogen/mocs_compilation.cpp.o
 mesh_segmentation: CMakeFiles/mesh_segmentation.dir/main.cpp.o
 mesh_segmentation: CMakeFiles/mesh_segmentation.dir/build.make
-mesh_segmentation: libCGAL_Qt5_moc_and_resources.a
+mesh_segmentation: /usr/lib/x86_64-linux-gnu/libQt5OpenGL.so.5.15.13
+mesh_segmentation: /usr/lib/x86_64-linux-gnu/libQt5Xml.so.5.15.13
+mesh_segmentation: /usr/lib/x86_64-linux-gnu/libQGLViewer-qt5.so
 mesh_segmentation: /usr/lib/x86_64-linux-gnu/libgmpxx.so
 mesh_segmentation: /usr/lib/x86_64-linux-gnu/libmpfr.so
 mesh_segmentation: /usr/lib/x86_64-linux-gnu/libgmp.so
-mesh_segmentation: /usr/lib/x86_64-linux-gnu/libQt5Svg.so.5.15.13
-mesh_segmentation: /usr/lib/x86_64-linux-gnu/libQt5OpenGL.so.5.15.13
 mesh_segmentation: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
 mesh_segmentation: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13
 mesh_segmentation: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
+mesh_segmentation: /usr/lib/x86_64-linux-gnu/libGLX.so
+mesh_segmentation: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 mesh_segmentation: CMakeFiles/mesh_segmentation.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/threesamyak/5-axis/stl/mesh_segmentation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable mesh_segmentation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/threesamyak/5-axis/stl/mesh_segmentation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable mesh_segmentation"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mesh_segmentation.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

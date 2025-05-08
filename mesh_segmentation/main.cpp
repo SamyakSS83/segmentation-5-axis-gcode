@@ -7,6 +7,7 @@
 #include <CGAL/Polygon_mesh_processing/connected_components.h>
 #include <CGAL/mesh_segmentation.h>
 #include <CGAL/property_map.h>
+#include <CGAL/bounding_box.h> // Add this header
 
 // For visualization
 #include <QGLViewer/qglviewer.h>
@@ -55,9 +56,8 @@ typedef Mesh::Property_map<face_descriptor, double> Face_double_map;
 typedef Mesh::Property_map<face_descriptor, std::size_t> Face_index_map;
 
 // For visualization
-typedef CGAL::Exact_predicates_inexact_constructions_kernel::FT FT;
-typedef CGAL::qglviewer::Vec Vec;
-typedef CGAL::qglviewer::Quaternion Quaternion;
+typedef qglviewer::Vec Vec;
+typedef qglviewer::Quaternion Quaternion;
 
 // Random color generation
 std::vector<QColor> generate_random_colors(int n) {
@@ -72,15 +72,22 @@ std::vector<QColor> generate_random_colors(int n) {
 }
 
 // Mesh viewer widget
-class MeshViewerWidget : public CGAL::QGLViewer {
+class MeshViewerWidget : public QGLViewer {
 public:
-    MeshViewerWidget(QWidget* parent = nullptr) : CGAL::QGLViewer(parent), mesh(nullptr), show_segments(true) {}
+    MeshViewerWidget(QWidget* parent = nullptr) : QGLViewer(parent), mesh(nullptr), show_segments(true) {}
     
     void setMesh(Mesh* mesh_ptr) {
         mesh = mesh_ptr;
         if (mesh) {
-            // Compute bounding box
-            CGAL::Bbox_3 bbox = CGAL::Polygon_mesh_processing::bbox(*mesh);
+            // Use a collection of points to compute the bounding box
+            std::vector<Point> points;
+            for (vertex_descriptor vd : mesh->vertices()) {
+                points.push_back(mesh->point(vd));
+            }
+            
+            // Fix: convert Iso_cuboid_3 to Bbox_3 using bbox() method
+            auto iso_box = CGAL::bounding_box(points.begin(), points.end());
+            CGAL::Bbox_3 bbox = iso_box.bbox();
             
             // Set camera to view the entire mesh
             setSceneBoundingBox(
@@ -201,7 +208,7 @@ protected:
             show_segments = !show_segments;
             update();
         } else {
-            CGAL::QGLViewer::keyPressEvent(e);
+            QGLViewer::keyPressEvent(e);
         }
     }
     
@@ -219,7 +226,7 @@ class MainWindow : public QMainWindow {
 public:
     MainWindow(QWidget* parent = nullptr) : QMainWindow(parent), mesh(nullptr) {
         // Initialize CGAL Qt resources
-        CGAL::Qt::init_resources();
+        // CGAL::Qt::init_resources();
         
         // Create the central widget (mesh viewer)
         viewer = new MeshViewerWidget(this);
@@ -371,8 +378,8 @@ private slots:
         
         // Create a property map for segment IDs
         if (mesh->property_map<face_descriptor, std::size_t>("f:segment").second) {
-            mesh->remove_property_map<face_descriptor, std::size_t>(
-                mesh->property_map<face_descriptor, std::size_t>("f:segment").first);
+            auto prop_pair = mesh->property_map<face_descriptor, std::size_t>("f:segment");
+            mesh->remove_property_map<face_descriptor, std::size_t>(prop_pair.first);
         }
         Face_index_map segment_property_map = 
             mesh->add_property_map<face_descriptor, std::size_t>("f:segment").first;
