@@ -2,3 +2,4 @@ sudo apt-get install libcgal-dev
 sudo apt-get install libcgal-dev libcgal-qt5-dev qtbase5-dev
 sudo apt-get install libqglviewer-dev-qt5
 sudo apt install libcgal-dev freeglut3-dev
+sudo apt-get install libeigen3-dev
