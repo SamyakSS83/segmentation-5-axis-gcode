@@ -1,5 +1,0 @@
-/home/threesamyak/5-axis/stl/mesh_segmentation/build/CMakeFiles/mesh_segmentation.dir
-/home/threesamyak/5-axis/stl/mesh_segmentation/build/CMakeFiles/edit_cache.dir
-/home/threesamyak/5-axis/stl/mesh_segmentation/build/CMakeFiles/rebuild_cache.dir
-/home/threesamyak/5-axis/stl/mesh_segmentation/build/CMakeFiles/mesh_segmentation_autogen_timestamp_deps.dir
-/home/threesamyak/5-axis/stl/mesh_segmentation/build/CMakeFiles/mesh_segmentation_autogen.dir

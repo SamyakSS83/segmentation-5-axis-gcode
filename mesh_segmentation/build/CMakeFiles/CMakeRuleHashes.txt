@@ -1,4 +1,0 @@
-# Hashes of file build rules.
-03726f80029219879d7e5ac587c55a37 CMakeFiles/mesh_segmentation_autogen
-03726f80029219879d7e5ac587c55a37 CMakeFiles/mesh_segmentation_autogen_timestamp_deps
-fc954beecc315b4602d46dd77f3c1aeb mesh_segmentation_autogen/timestamp
