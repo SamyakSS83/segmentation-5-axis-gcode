@@ -1,25 +1,18 @@
-cmake_minimum_required(VERSION 3.10)
-project(MeshSegmentationTool)
+cmake_minimum_required(VERSION 3.15)
+project(MeshSegmenter)
 
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+find_package(CGAL REQUIRED COMPONENTS Qt5)  # Explicit Qt5 component [1][3]
+include(${CGAL_USE_FILE})
 
-# Find CGAL and Eigen
-find_package(CGAL REQUIRED COMPONENTS Core)
-find_package(Eigen3 REQUIRED)
+add_executable(mesh_segmenter main.cpp)
 
-# Add executable with all source files
-add_executable(MeshSegmentationTool
-    main.cpp
-    stl_to_off.cpp
-    MeshLoader.cpp
-    MeshSegmenter.cpp
-    MeshTransformer.cpp
-    MeshViewer.cpp
+# Essential viewer definition [1][4]
+add_definitions(-DCGAL_USE_BASIC_VIEWER)
+
+target_compile_features(mesh_segmenter PRIVATE cxx_std_17)
+target_link_libraries(mesh_segmenter
+  PRIVATE 
+  CGAL::CGAL
+  CGAL::CGAL_Qt5  # Explicit Qt5 linking [1][3]
+  CGAL::CGAL_Basic_viewer
 )
-
-# Include Eigen if found
-target_include_directories(MeshSegmentationTool PRIVATE ${EIGEN3_INCLUDE_DIR})
-
-# Link with CGAL
-target_link_libraries(MeshSegmentationTool CGAL::CGAL CGAL::CGAL_Core)
